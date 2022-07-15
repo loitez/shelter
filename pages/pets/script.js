@@ -43,7 +43,6 @@ sendRequest('GET', requestURL)
                 petLength++;
             }
         })
-        console.log(petLength)
         let all = 48 / petLength
         let current = 1;
 
@@ -59,7 +58,6 @@ sendRequest('GET', requestURL)
             prevTwo.classList.remove('disabled')
             if (current !== all) {
                 current++;
-                console.log(current)
                 thisPage.textContent = `${current}`;
             }
             if (current === all) {
@@ -84,7 +82,6 @@ sendRequest('GET', requestURL)
             nextTwo.classList.remove('disabled')
             if (current !== 1) {
                 current--;
-                console.log(current)
                 thisPage.textContent = `${current}`;
                 prevOne.classList.remove('disabled')
             }
@@ -182,7 +179,6 @@ sendRequest('GET', requestURL)
         let x = [];
         let arrNew = x.concat(a, b, c, d, e, f);
 
-        console.log(arrNew)
 
         let n;
 
@@ -197,7 +193,6 @@ sendRequest('GET', requestURL)
 
         function createCard() {
             let arr = arrNew.slice(start, end);
-            console.log('arr', arr)
             for (let i = 0; i < n; i++) {
 
                 petCards[i].querySelector('.our-friends__card-title').innerHTML = arr[i][0]
@@ -211,80 +206,6 @@ sendRequest('GET', requestURL)
 
         }
 
-        /*let petsIndexes = []
-        let randomPets = []
-        randomPets.length = 48;
-        let number = 0;
-        let start = 0;*/
-
-        /*let k = randomise(0, 7)
-        petsIndexes.push(k)*/
-
-        // записываем индексы элементов, которые уже есть
-       /* let array = [];
-
-        for (let s = 0; s < data.length; s++) {
-            petsIndexes.push(s)
-        }
-
-        console.log(petsIndexes)
-
-        petCards.forEach((item) => {
-            for (let t = 0; t < petLength; t++) {
-                let title = item.querySelector('.our-friends__card-title').textContent
-                if (data[t].name === title) {
-                    petsIndexes.splice(t, 1, '')
-                }
-            }
-        })
-        for (let p = 0; p < petsIndexes.length; p++) {
-            if (petsIndexes[p] === '') {
-                petsIndexes.splice(p, 1)
-                p -= 1;
-            }
-        }
-
-        array.unshift(current)*/
-
-
-
-       /* eightPets.push(k)
-        sixPets.push(k)
-        threePets.push(k)
-        randomPets.push(k)*/
-
-
-        /*for (let m = 0; m < petLength; m++) {
-            let k = randomise(0, 7)
-            /!*while (eightPets.includes(k) || sixPets.includes(k) || threePets.includes(k)) {
-                k = randomise(k)
-            }*!/
-            eightPets.push(k)
-            sixPets.push(k)
-            threePets.push(k)
-        }*/
-
-
-        /*for (let k = 0; k < 8; k++) {
-            randomPets.fill(number, start, start + 6)
-            start += 6
-            number++
-        }*/
-
-
-
-
-
-
-        /*randomPets.sort((a, b) => {
-            randomPets = Math.random() - 0.5
-        })*/
-
-        /*randomPets.sort(() => Math.random() - 0.5)*/
-
-
-
-        // проверка на повторение каждой 7 карточки
 
 
 
@@ -350,7 +271,6 @@ sendRequest('GET', requestURL)
     .then ((data) => {
         petCards.forEach((item) => {
             item.addEventListener('click', () => {
-                console.log('click');
                 for (let d = 0; d < data.length; d++) {
                     let title = item.querySelector('.our-friends__card-title').textContent
                     if (data[d].name === title) {
@@ -409,13 +329,11 @@ document.addEventListener('mouseout', (event) => {
 
 sendRequest('GET', requestURL)
     .then ((data) => {
-        console.log('data', data[0])
         for (let i = 0; i < petCards.length; i++) {
             petCards[i].querySelector('.our-friends__card-title').innerHTML = data[i].name
             petCards[i].querySelector('.our-friends__card-img').src = data[i].img
 
         }
-        console.log(data)
     })
     .catch(err => console.log(err))
 
@@ -469,7 +387,6 @@ navItems.forEach((element) => {
 
 window.addEventListener('click', (event) => {
     const target = event.target;
-    console.log(target)
     if (!target.closest('.menu')) {
         navigation.classList.remove('active')
         logo.classList.remove('active')
@@ -498,7 +415,6 @@ function stickyHeader() {
 
 petCards.forEach((item) => {
     item.onmouseover = () => {
-        console.log('mouse on')
         petCards.forEach((element) => {
             if (element.classList.contains('active')) {
                 element.classList.remove('active')

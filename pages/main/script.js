@@ -91,13 +91,11 @@ document.addEventListener('mouseout', (event) => {
 
 sendRequest('GET', requestURL)
     .then ((data) => {
-        console.log('data', data[0])
         for (let i = 0; i < petCards.length; i++) {
             petCards[i].querySelector('.our-friends__card-title').innerHTML = data[i].name
             petCards[i].querySelector('.our-friends__card-img').src = data[i].img
 
         }
-        console.log(data)
     })
     .catch(err => console.log(err))
 
