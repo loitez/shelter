@@ -257,7 +257,8 @@ button {
   pointer-events: none; }
 
 .popup {
-  display: none; }
+  display: none;
+  position: relative; }
   .popup.active {
     display: block; }
   .popup.wrapper {

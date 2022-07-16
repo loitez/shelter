@@ -294,6 +294,7 @@ button {
 }
 .popup {
   display: none;
+  position: relative;
   &.active {
     display: block;
   }
