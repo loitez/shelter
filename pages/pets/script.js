@@ -374,7 +374,7 @@ navBurger.addEventListener('click', () => {
     overlay.classList.toggle('active')
     body.classList.toggle('disable-scroll')
     html.classList.toggle('disable-scroll')
-    container.classList.toggle'disable-scroll')
+    container.classList.toggle('disable-scroll')
     navList.classList.toggle('active')
 })
 
@@ -399,8 +399,8 @@ window.addEventListener('click', (event) => {
         navBurger.classList.remove('active')
         overlay.classList.remove('active')
         body.classList.remove('disable-scroll')
-        html.classList.remove('disable-scroll')
         container.classList.remove('disable-scroll')
+        html.classList.remove('disable-scroll')
         navList.classList.remove('active')
     }
 })
