@@ -48,6 +48,7 @@ sendRequest('GET', requestURL)
                 popup.classList.add('active')
                 body.classList.add('disable-popup-scroll')
                 html.classList.add('disable-popup-scroll')
+                container.classList.add('disable-popup-scroll')
                 overlayPopup.classList.add('active-popup')
             })
         })
@@ -58,6 +59,7 @@ popupBtn.addEventListener('click', () => {
     popup.classList.remove('active')
     body.classList.remove('disable-popup-scroll')
     html.classList.remove('disable-popup-scroll')
+    container.classList.remove('disable-popup-scroll')
     overlayPopup.classList.remove('active-popup')
 })
 
@@ -68,6 +70,7 @@ document.addEventListener('click', (event) => {
         overlayPopup.classList.remove('active-popup')
         body.classList.remove('disable-popup-scroll')
         html.classList.remove('disable-popup-scroll')
+        container.classList.remove('disable-popup-scroll')
     }
 })
 
@@ -197,6 +200,7 @@ navBurger.addEventListener('click', () => {
     overlay.classList.toggle('active')
     body.classList.toggle('disable-scroll')
     html.classList.toggle('disable-scroll')
+    container.classList.toggle('disable-scroll')
     navList.classList.toggle('active')
 
 })
@@ -209,6 +213,7 @@ navItems.forEach((element) => {
         overlay.classList.remove('active')
         body.classList.remove('disable-scroll')
         html.classList.remove('disable-scroll')
+        container.classList.remove('disable-scroll')
         navList.classList.remove('active')
     })
 })
@@ -222,6 +227,7 @@ window.addEventListener('click', (event) => {
         overlay.classList.remove('active')
         body.classList.remove('disable-scroll')
         html.classList.remove('disable-scroll')
+        container.classList.remove('disable-scroll')
         navList.classList.remove('active')
     }
 })
